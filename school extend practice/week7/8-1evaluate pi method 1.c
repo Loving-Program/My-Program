@@ -1,4 +1,4 @@
-//evaluate pi
+//evaluate pi method 1
 #include <stdio.h>
 int main()
 {
@@ -7,9 +7,9 @@ int main()
 	for(n=2,i=3;n<=1000;n++,i=i+2)
 		{
 			if(n%2==0)//n为偶数 
-				sum=sum-1.00/i;
+				sum=sum-1.0/i;
 			else//n为奇数 
-				sum=sum+1.00/i;
+				sum=sum+1.0/i;
 		}
 	printf("pi=%.3f\n",4*sum);
 }
