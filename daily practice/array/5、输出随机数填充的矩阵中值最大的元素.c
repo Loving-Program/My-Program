@@ -5,7 +5,7 @@ int main()
 { 
 	int i,j,m,n,max,num,a[3][4];
 	srand((unsigned) time(NULL)); //用时间做种，每次产生随机数不一样
-	printf("random array:\n");
+	printf("random array:\n");//打印随机数组 
 	for (i=0;i<=2;i++)
 	{
 		for(j=0;j<=3;j++)
@@ -15,7 +15,7 @@ int main()
 			}
 		printf("\n");
 	}
-	max=a[0][0];
+	max=a[0][0];//求二维随机数组中最大元素 
 	for(i=0;i<=2;i++)
 		for(j=0;j<=3;j++)
 		{
@@ -26,5 +26,5 @@ int main()
 				n=j;
 			}
 		}
-	printf("max=%d\nraw=%d\ncolumn=%d",max,m,n);
+	printf("max=%d\nraw=%d\ncolumn=%d",max,m,n);//打印二维数组最大元素值及该值对应的行号列号 
 }
