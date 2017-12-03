@@ -13,7 +13,7 @@ int main()
 	printf("%d %d %d",a[0],a[1],a[2]);				*/
 	scanf("%s",b);                       //输入asdfsergfd 
 	printf("%c %c %c\n",b[0],b[1],b[2]); //输出asd 
-	printf("%s",b);                      //输出asdfsergfd 
+	printf("%s",b);                      //输出asdfsergfd ????
 }
 
 /* 
