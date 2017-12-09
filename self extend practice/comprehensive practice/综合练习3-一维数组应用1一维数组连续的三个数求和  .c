@@ -17,11 +17,11 @@ int main()
 void getrand(int *a)//调用C库函数中随机函数给数组a赋值 
 {
 	int i; 
-	int number;
 	srand((unsigned) time(NULL)); //用时间做种，每次产生随机数不一样
 	                              //NULL表示取当前的时间 
 	for(i=0;i<9;i++)
-	{	*(a+i)=rand()%50; //产生0-49的随机数，rand取值范围0-32767 
+	{
+		*(a+i)=rand()%50; //产生0-49的随机数，rand取值范围0-32767 
 		printf("%d\t", *(a+i));//输出数组中元素 
 	}
 	printf("\n");
