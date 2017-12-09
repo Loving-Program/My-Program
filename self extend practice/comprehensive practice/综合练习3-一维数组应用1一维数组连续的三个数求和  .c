@@ -1,4 +1,6 @@
-//综合练习（三）一维数组应用 
+/*综合练习（三）一维数组应用 
+一维数组连续的三个数求和 
+*/ 
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h> //用到了time函数 
