@@ -8,28 +8,38 @@ void sum();
 void ChangePassword();
 void main()
 {
-    int account;
+    struct card
+    {	
+    	char account[20];
+    	char  pwd[7];
+   		float money;
+    }card1={"123456789","666666",1.23f};
+    char account[20];
+    char pwd[7];
+    int i;
     printf("－－－欢迎使用ATM机－－－\n");
-    printf("请插卡：\n");
-    scanf("%d",&account);
+    printf("请插入您的银行卡：\n");
+    scanf("%s",&account);
     Checkpassword(account);
 }
-void Checkpassword(int account)
+void Checkpassword(char account[])
 {
 	int pwd,i;
-	if(account==111)
+	if(strcmp(account,card1.account)==0)
     {
     	printf("请输入您的密码后按确认键:\n");
-    	for(i=1;i<=3;i++)
+    	for(i=3;i>=0;i--)
     	{
 			scanf("%d",&pwd);
-    		if(pwd==666)
+    		if(strcmp(pwd,card1.pwd)==0)
+			{
 				service();
-    		else
-	    		if(i!=3)
-	    			printf("您的密码输入错误,请重新输入，您还有%d次机会。\n",3-i);
-	    		else
-	    			printf("您已经错误三次，吞卡，联系发卡行。");
+				break;
+			}
+    		else if(i!=0)
+	    		printf("您的密码输入错误,请重新输入，您还有%d次机会。\n",i);
+	    	else
+	    		printf("您已经错误三次，吞卡，请联系发卡行。");
     	}	
     }
     else
@@ -92,19 +102,18 @@ void sum()
  } 
 void ChangePassword()
 {
-	int pwd=666,password,i; 
+	int pwd=666666,password,i; 
 	int newpwd1,newpwd2;
 	printf("请输入银行卡原密码：\n");
-	for(i=1;i<=3;i++)
+	for(i=2;i>=0;i--)
    	{
 		scanf("%d",&pwd);
-    	if(pwd==666)
+    	if(strcmp(pwd,card1.pwd)==0)
 	    	break;
-    	else
-	    	if(i!=3)
-	    		printf("您的密码输入错误,请重新输入，您还有%d次机会。\n",3-i);
-	   		else
-	    		printf("您已经错误三次，吞卡，联系发卡行。");
+    	else if(i!=0)
+	    	printf("您的密码输入错误,请重新输入，您还有%d次机会。\n",i);
+	   	else
+	    	printf("您已经错误三次，吞卡，联系发卡行。\n");
    	}	
    	printf("请输入新密码：");
 	scanf("%d",&newpwd1);
