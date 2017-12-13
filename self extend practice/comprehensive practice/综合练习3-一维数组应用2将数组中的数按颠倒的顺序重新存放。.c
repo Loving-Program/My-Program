@@ -24,12 +24,12 @@ void getrand(int *a)//调用C库函数中随机函数给数组a赋值
 }
 void invert(int *a)
 {
-	int i,j,t;
-	for(i=0,j=7;i<4;i++,j--)
+	int i,t;
+	for(i=0;i<4;i++)
 	{
 		t=a[i];
-		a[i]=a[j];
-		a[j]=t;	
+		a[i]=a[7-i];
+		a[7-i]=t;	
 	}
 	for(i=0;i<8;i++)
 		printf("%d\t",a[i]);
