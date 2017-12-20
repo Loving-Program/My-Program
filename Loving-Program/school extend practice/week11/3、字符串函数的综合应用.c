@@ -32,7 +32,7 @@ void rev(char *str1)
 		for(i=0;i<(length/2);i++)
 		{
 			t=str1[i];
-			str1[i]=str1[length-1-i];
+			str1[i]=str1[length-1-i];//依次将第一个与最后一个，第二个与倒数第二个交换位置 
 			str1[length-1-i]=t;
 		}	
 	}
@@ -42,7 +42,7 @@ void change(char *str2)
 	int len,i,t;
 	len=strlen(str2);
 	for(i=0;i<len;i++)
-		if(str2[i]>=65&&str2[i]<=90)
+		if(str2[i]>=65&&str2[i]<=90)//判断字符状态 
 //	strlwr(str2[i]);error strlwr为字符串整体变为小写函数，并不使用于单个字符元素 
 			str2[i]=str2[i]-65+97;
 		else
