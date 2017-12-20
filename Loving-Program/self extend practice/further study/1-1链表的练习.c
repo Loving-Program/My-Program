@@ -1,4 +1,7 @@
-//链表 
+/*链表 
+同数组相比		优点：便于插入删除元素
+				缺点：不可单个引用元素 
+*/ 
 #include<stdio.h>
 #include<string.h>
 struct node_stu{
